@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WavePoint - Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <main class="auth-page">
+    <section class="auth-image">
+      <h1>CRIE SUA CONTA</h1>
+      <p>Cadastre-se para acessar o sistema oficial, reservar equipamentos e agendar aulas de surf com praticidade.</p>
+    </section>
+
+    <section class="auth-box-wrap">
+      <div class="auth-box">
+        <h2>Cadastro</h2>
+        <p>Preencha os dados abaixo para criar sua conta.</p>
+
+        <form onsubmit="fazerCadastro(event)">
+          <div class="field">
+            <label>Nome completo</label>
+            <input id="cadNome" type="text" placeholder="Digite seu nome" required />
+          </div>
+
+          <div class="field">
+            <label>E-mail</label>
+            <input id="cadEmail" type="email" placeholder="seuemail@gmail.com" required />
+          </div>
+
+          <div class="field">
+            <label>Telefone</label>
+            <input id="cadTelefone" type="tel" placeholder="(00) 00000-0000" required />
+          </div>
+
+          <div class="field">
+            <label>Senha</label>
+            <input id="cadSenha" type="password" placeholder="Crie uma senha" required />
+          </div>
+
+          <button type="submit" class="btn-solid" style="width: 100%;">Criar conta</button>
+        </form>
+
+        <div class="auth-link">Já tem conta? <a href="login.html">Entrar</a></div>
+        <div class="auth-link"><a href="home.html">Voltar para a landing page</a></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

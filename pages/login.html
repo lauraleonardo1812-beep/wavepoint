@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WavePoint - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <main class="auth-page">
+    <section class="auth-image">
+      <h1>ENTRE NA SUA CONTA</h1>
+      <p>Acesse o site oficial para fazer reservas, agendar aulas, acompanhar preços e consultar informações completas.</p>
+    </section>
+
+    <section class="auth-box-wrap">
+      <div class="auth-box">
+        <h2>Login</h2>
+        <p>Use seu e-mail e senha para entrar na área oficial da WavePoint.</p>
+
+        <form onsubmit="fazerLogin(event)">
+          <div class="field">
+            <label>E-mail</label>
+            <input id="loginEmail" type="email" placeholder="seuemail@gmail.com" required />
+          </div>
+
+          <div class="field">
+            <label>Senha</label>
+            <input id="loginSenha" type="password" placeholder="Digite sua senha" required />
+          </div>
+
+          <button type="submit" class="btn-solid" style="width: 100%;">Entrar</button>
+        </form>
+
+        <div class="auth-link">Não tem conta? <a href="cadastro.html">Cadastre-se</a></div>
+        <div class="auth-link"><a href="home.html">Voltar para a landing page</a></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

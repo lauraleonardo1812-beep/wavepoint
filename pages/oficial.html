@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WavePoint - Site Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+<nav class="navbar">
+  <a href="oficial.html" class="logo">WAVE<span>POINT</span></a>
+
+  <ul class="menu">
+    <li><a href="#painel">Painel</a></li>
+    <li><a href="#catalogoOficial">Catálogo</a></li>
+    <li><a href="#reservasOficial">Reservas</a></li>
+    <li><a href="#aulasOficial">Aulas</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-danger" onclick="sair()">Sair</button>
+
+    <button class="hamburguer" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+  <header class="app-header" id="painel">
+    <h1>BEM-VINDO</h1>
+    <p id="mensagemUsuario">
+      Bem-vindo ao sistema oficial da WavePoint. Aqui o cliente acessa as informações completas,
+      faz reservas e agenda serviços.
+    </p>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="dashboard-cards">
+      <div class="dashboard-card">
+        <i class="fa-solid fa-box-open"></i>
+        <h3>12</h3>
+        <p>Equipamentos</p>
+      </div>
+
+      <div class="dashboard-card">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h3>24h</h3>
+        <p>Reservas online</p>
+      </div>
+
+      <div class="dashboard-card">
+        <i class="fa-solid fa-person-swimming"></i>
+        <h3>3</h3>
+        <p>Tipos de aula</p>
+      </div>
+
+      <div class="dashboard-card">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <h3>28°C</h3>
+        <p>Clima atual</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalogoOficial">
+    <div class="section-header">
+      <div class="tag">Área logada</div>
+      <h2 class="section-title">CATÁLOGO <span>OFICIAL</span></h2>
+      <p class="section-desc">Aqui ficam os itens que o cliente pode reservar depois de entrar no sistema.</p>
+    </div>
+
+    <div class="catalogo-grid">
+      <div class="produto-card">
+        <img src="https://i.pinimg.com/1200x/01/6f/81/016f8184a98b7b39b72af8ada995b227.jpg" alt="Prancha de Surf" />
+        <div class="produto-info">
+          <h3>Prancha de Surf</h3>
+          <p>R$ 80/dia - retirada na loja ou delivery</p>
+          <button class="btn-solid" onclick="reservar('Prancha de Surf')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <img src="https://cdn.awsli.com.br/2500x2500/1866/1866589/produto/18355333370f326a5c5.jpg" alt="Kit Praia" />
+        <div class="produto-info">
+          <h3>Kit Praia</h3>
+          <p>R$ 50/dia - cadeira + guarda-sol</p>
+          <button class="btn-solid" onclick="reservar('Kit Praia')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <img src="https://production.media.dcx.clubmed/?url=https%3A%2F%2Fassets.dream.clubmed%2Fpm_7531_583_583440-cicd6bu5ft-swhr.jpg&format=webp&width=380&height=240&quality=85" alt="Stand Up Paddle" />
+        <div class="produto-info">
+          <h3>Stand Up Paddle</h3>
+          <p>R$ 60/2h - remo e colete inclusos</p>
+          <button class="btn-solid" onclick="reservar('Stand Up Paddle')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <img src="https://cdn.paytour.com.br/assets/images/passeios-1000342/764321632fd806400a74500bf14a5fe2/salobra%201_optimized.webp" alt="Caiaque" />
+        <div class="produto-info">
+          <h3>Caiaque</h3>
+          <p>R$ 70/2h - individual ou duplo</p>
+          <button class="btn-solid" onclick="reservar('Caiaque')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <img src="https://s2.glbimg.com/Jh_MOyG5qgKTrMQ9U77IE2OSuBM=/0x12:950x546/620x349/s.glbimg.com/es/ge/f/original/2013/10/17/foto1.jpg" alt="Bicicleta" />
+        <div class="produto-info">
+          <h3>Bicicleta</h3>
+          <p>R$ 30/dia - passeio pela orla</p>
+          <button class="btn-solid" onclick="reservar('Bicicleta')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <img src="https://s2-g1.glbimg.com/op40t8dzrfBfEphd_VVN7fqTEAI=/0x0:1280x960/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/Y/4/B9sWoESiqsVdhcicaxRw/barracas-na-praia-de-iracema-funcionam-24-horas-mas-cobram-ate-r-30-pelo-uso-de-cadeiras-e-guarda-sol..jpg" alt="Guarda-sol" />
+        <div class="produto-info">
+          <h3>Guarda-sol</h3>
+          <p>R$ 25/dia - resistente ao vento</p>
+          <button class="btn-solid" onclick="reservar('Guarda-sol')">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section form-section" id="reservasOficial">
+    <div class="section-header">
+      <div class="tag">Reserva oficial</div>
+      <h2 class="section-title">FAZER <span>RESERVA</span></h2>
+      <p class="section-desc">Formulário completo da área oficial para registrar a reserva do cliente.</p>
+    </div>
+
+    <div class="form-box">
+      <form onsubmit="enviarReservaOficial(event)">
+        <div class="form-grid">
+          <div class="field">
+            <label>Nome</label>
+            <input id="resNome" type="text" placeholder="Nome do cliente" required />
+          </div>
+
+          <div class="field">
+            <label>WhatsApp</label>
+            <input id="resTelefone" type="tel" placeholder="(00) 00000-0000" required />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>Serviço</label>
+            <select id="resServico" required>
+              <option value="">Selecione</option>
+              <option>Aula de surf iniciante</option>
+              <option>Aula de surf intermediário</option>
+              <option>Aula individual</option>
+              <option>Prancha de Surf</option>
+              <option>Kit Praia</option>
+              <option>Stand Up Paddle</option>
+              <option>Caiaque</option>
+              <option>Bicicleta</option>
+              <option>Guarda-sol</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Data</label>
+            <input id="resData" type="date" required />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>Horário</label>
+            <select id="resHorario" required>
+              <option value="">Selecione</option>
+              <option>07:00</option>
+              <option>09:00</option>
+              <option>14:00</option>
+              <option>16:00</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Entrega</label>
+            <select id="resEntrega" required>
+              <option>Retirada na loja</option>
+              <option>Delivery na praia</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Observações</label>
+          <textarea id="resObs" placeholder="Número de pessoas, nível no surf ou observações"></textarea>
+        </div>
+
+        <button type="submit" class="btn-solid">Confirmar reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section blue-section" id="aulasOficial">
+    <div class="section-header">
+      <div class="tag">Aulas oficiais</div>
+      <h2 class="section-title">AGENDA DE <span>SURF</span></h2>
+      <p class="section-desc">Escolha o tipo de aula mais adequado para seu nível.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card aula-card">
+        <h3>Iniciante</h3>
+        <p>Ideal para aprender segurança, postura e primeiras ondas.</p>
+        <div class="price">R$ 120 <small>/aula</small></div>
+        <br />
+        <button class="btn-solid" onclick="reservar('Aula de Surf Iniciante')">Agendar</button>
+      </div>
+
+      <div class="card aula-card destaque">
+        <h3>Intermediário</h3>
+        <p>Para evolução de remada, leitura de onda e manobras.</p>
+        <div class="price">R$ 150 <small>/aula</small></div>
+        <br />
+        <button class="btn-solid" onclick="reservar('Aula de Surf Intermediário')">Agendar</button>
+      </div>
+
+      <div class="card aula-card">
+        <h3>Individual</h3>
+        <p>Aula exclusiva com Bruno Nascimento e orientação personalizada.</p>
+        <div class="price">R$ 250 <small>/aula</small></div>
+        <br />
+        <button class="btn-solid" onclick="reservar('Aula Individual')">Agendar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="tag">Minhas reservas</div>
+      <h2 class="section-title">ÚLTIMAS <span>RESERVAS</span></h2>
+      <p class="section-desc">As reservas feitas nesta página aparecem abaixo e ficam salvas no navegador.</p>
+    </div>
+
+    <div id="listaReservas" class="official-grid"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>WAVEPOINT</h3>
+        <p>Área oficial acessada após login ou cadastro.</p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Menu</strong>
+        <a href="#painel">Painel</a>
+        <a href="#catalogoOficial">Catálogo</a>
+        <a href="#reservasOficial">Reservas</a>
+      </div>
+
+      <div>
+        <strong>Atendimento</strong>
+        <p>WhatsApp: (11) 99999-0000</p>
+        <p>Instagram: @wavepoint.surf</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>@Laura Romano e Leonardo Teixeira</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

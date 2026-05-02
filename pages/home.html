@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WavePoint - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <a class="whatsapp" href="https://wa.me/5511999990000" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+<nav class="navbar">
+  <a href="home.html" class="logo">WAVE<span>POINT</span></a>
+
+  <ul class="menu">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#equipamentos">Equipamentos</a></li>
+    <li><a href="#aulas">Aulas</a></li>
+    <li><a href="#clima">Clima</a></li>
+    <li><a href="#contato">Contato</a></li>
+
+    <!-- BOTÕES AQUI -->
+    <div class="menu-buttons">
+      <a class="btn-outline" href="login.html">Entrar</a>
+      <a class="btn-solid" href="cadastro.html">Cadastrar</a>
+    </div>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="hamburguer" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tag"><i class="fa-solid fa-water"></i> Surf, lazer e aventura</div>
+      <h1>WAVE<span>POINT</span></h1>
+      <p>
+        Aluguel de itens de praia e aulas de surf com Bruno Nascimento. Reserve pranchas,
+        cadeiras, guarda-sóis, stand up paddle, caiaques, bicicletas e agende sua aula de surf online.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn-solid" href="cadastro.html">Criar conta grátis</a>
+        <a href="#servicos" class="btn-white">Conhecer serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact" id="servicos">
+    <div class="section-header">
+      <div class="tag">Objetivos do site</div>
+      <h2 class="section-title">TUDO PARA SUA <span>PRAIA</span></h2>
+      <p class="section-desc">
+        A WavePoint foi criada para turistas, moradores locais e iniciantes no surf que buscam praticidade,
+        segurança e conforto.
+      </p>
+    </div>
+
+    <div class="cards-grid home-cards">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>Reservas online</h3>
+        <p>Agendamento de aulas e reserva de equipamentos com retirada na loja ou delivery na praia.</p>
+      </div>
+
+      <div class="card destaque">
+        <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
+        <h3>Preços claros</h3>
+        <p>Exibição dos valores dos itens, aulas e serviços para facilitar a escolha do cliente.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3>Contato rápido</h3>
+        <p>Integração com WhatsApp, Instagram e localização para facilitar atendimento e divulgação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blue-section" id="equipamentos">
+    <div class="section-header">
+      <div class="tag">Catálogo</div>
+      <h2 class="section-title">EQUIPAMENTOS <span>DISPONÍVEIS</span></h2>
+      <p class="section-desc">Confira alguns itens disponíveis para aluguel no ponto fixo de Bruno.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card equipment-card">
+        <img src="https://i.pinimg.com/1200x/01/6f/81/016f8184a98b7b39b72af8ada995b227.jpg" alt="Prancha de surf" />
+        <div class="equipment-content">
+          <div class="equipment-title">Equipamento aquático</div>
+          <span class="status">Disponível</span>
+          <h3>Prancha de Surf</h3>
+          <p>Longboard e shortboard para iniciantes e intermediários.</p>
+          <div class="price">R$ 80 <small>/dia</small></div>
+        </div>
+      </div>
+
+      <div class="card equipment-card">
+        <img src="https://cdn.awsli.com.br/2500x2500/1866/1866589/produto/18355333370f326a5c5.jpg" alt="Kit praia" />
+        <div class="equipment-content">
+          <div class="equipment-title">Conforto na areia</div>
+          <span class="status">Disponível</span>
+          <h3>Kit Praia</h3>
+          <p>Cadeira, guarda-sol e apoio para aproveitar a praia com conforto.</p>
+          <div class="price">R$ 50 <small>/dia</small></div>
+        </div>
+      </div>
+
+      <div class="card equipment-card">
+        <img src="https://production.media.dcx.clubmed/?url=https%3A%2F%2Fassets.dream.clubmed%2Fpm_7531_583_583440-cicd6bu5ft-swhr.jpg&format=webp&width=380&height=240&quality=85" alt="Stand up paddle" />
+        <div class="equipment-content">
+          <div class="equipment-title">Passeio no mar</div>
+          <span class="status">Disponível</span>
+          <h3>Stand Up Paddle</h3>
+          <p>Prancha SUP com remo e colete para passeios em mar calmo.</p>
+          <div class="price">R$ 60 <small>/2h</small></div>
+        </div>
+      </div>
+
+      <div class="card equipment-card">
+        <img src="https://cdn.paytour.com.br/assets/images/passeios-1000342/764321632fd806400a74500bf14a5fe2/salobra%201_optimized.webp" alt="Caiaque" />
+        <div class="equipment-content">
+          <div class="equipment-title">Aventura</div>
+          <span class="status">Disponível</span>
+          <h3>Caiaque</h3>
+          <p>Caiaque individual ou duplo para passeio e aventura.</p>
+          <div class="price">R$ 70 <small>/2h</small></div>
+        </div>
+      </div>
+
+      <div class="card equipment-card">
+        <img src="https://s2.glbimg.com/Jh_MOyG5qgKTrMQ9U77IE2OSuBM=/0x12:950x546/620x349/s.glbimg.com/es/ge/f/original/2013/10/17/foto1.jpg" alt="Bicicleta" />
+        <div class="equipment-content">
+          <div class="equipment-title">Passeio pela orla</div>
+          <span class="status">Disponível</span>
+          <h3>Bicicleta</h3>
+          <p>Bicicletas para passeio pela orla e regiões próximas.</p>
+          <div class="price">R$ 30 <small>/dia</small></div>
+        </div>
+      </div>
+
+      <div class="card equipment-card">
+        <img src="https://s2-g1.glbimg.com/op40t8dzrfBfEphd_VVN7fqTEAI=/0x0:1280x960/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/Y/4/B9sWoESiqsVdhcicaxRw/barracas-na-praia-de-iracema-funcionam-24-horas-mas-cobram-ate-r-30-pelo-uso-de-cadeiras-e-guarda-sol..jpg" alt="Guarda-sol" />
+        <div class="equipment-content">
+          <div class="equipment-title">Proteção solar</div>
+          <span class="status">Disponível</span>
+          <h3>Guarda-sol</h3>
+          <p>Guarda-sol resistente para proteção durante o dia todo.</p>
+          <div class="price">R$ 25 <small>/dia</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact" id="aulas">
+    <div class="section-header">
+      <div class="tag">Escola de surf</div>
+      <h2 class="section-title">AULAS PARA <span>TODOS OS NÍVEIS</span></h2>
+      <p class="section-desc">Aulas individuais e em grupo, com orientação profissional e foco em segurança.</p>
+    </div>
+
+    <div class="cards-grid home-cards">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-child-reaching"></i></div>
+        <h3>Iniciante</h3>
+        <p>Para quem nunca surfou ou quer aprender o básico com segurança.</p>
+        <div class="price">R$ 120 <small>/aula</small></div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-water"></i></div>
+        <h3>Intermediário</h3>
+        <p>Para quem já sobe na prancha e deseja evoluir manobras e leitura de onda.</p>
+        <div class="price">R$ 150 <small>/aula</small></div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-user-check"></i></div>
+        <h3>Aula Individual</h3>
+        <p>Treinamento exclusivo com atenção total do instrutor Bruno Nascimento.</p>
+        <div class="price">R$ 250 <small>/aula</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section form-section" id="reservas">
+    <div class="section-header">
+      <div class="tag">Pré-agendamento</div>
+      <h2 class="section-title">RESERVE EM <span>SEGUNDOS</span></h2>
+      <p class="section-desc">Na landing page, o cliente já pode demonstrar interesse. Para confirmar, ele cria uma conta.</p>
+    </div>
+
+    <div class="form-box">
+      <form onsubmit="enviarPreReserva(event)">
+        <div class="form-grid">
+          <div class="field">
+            <label>Nome</label>
+            <input type="text" placeholder="Digite seu nome" required />
+          </div>
+
+          <div class="field">
+            <label>WhatsApp</label>
+            <input type="tel" placeholder="(00) 00000-0000" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Serviço desejado</label>
+          <select required>
+            <option value="">Selecione uma opção</option>
+            <option>Aula de surf iniciante</option>
+            <option>Aula de surf intermediário</option>
+            <option>Aluguel de prancha</option>
+            <option>Kit praia</option>
+            <option>Stand Up Paddle</option>
+            <option>Caiaque</option>
+            <option>Bicicleta</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-solid">Enviar interesse</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section compact" id="clima">
+    <div class="section-header">
+      <div class="tag">Condições do mar</div>
+      <h2 class="section-title">CLIMA E <span>SURF</span></h2>
+      <p class="section-desc">Informações simuladas de previsão do tempo para ajudar surfistas e turistas.</p>
+    </div>
+
+    <div class="clima-box">
+      <div>
+        <div class="temperatura">28°C</div>
+        <h3>Ensolarado</h3>
+        <p>Dia favorável para aulas de surf, passeio de bicicleta e aluguel de itens de praia.</p>
+      </div>
+
+      <div class="clima-grid">
+        <div class="clima-item"><strong>Ondas</strong><span>1,2 m</span></div>
+        <div class="clima-item"><strong>Vento</strong><span>15 km/h</span></div>
+        <div class="clima-item"><strong>Água</strong><span>26°C</span></div>
+        <div class="clima-item"><strong>Índice de surf</strong><span>8.2 / 10</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blue-section">
+    <div class="section-header">
+      <div class="tag">Galeria</div>
+      <h2 class="section-title">MOMENTOS NA <span>PRAIA</span></h2>
+      <p class="section-desc">Fotos de aulas, alunos, paisagens locais e equipamentos.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80" alt="Surfista pegando onda" />
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Praia limpa" />
+      <img src="https://images.unsplash.com/photo-1528150177508-7cc0c36cda5c?auto=format&fit=crop&w=900&q=80" alt="Aula na praia" />
+      <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=900&q=80" alt="Mar e prancha" />
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="section-header">
+      <div class="tag">Contato</div>
+      <h2 class="section-title">FALE COM A <span>WAVEPOINT</span></h2>
+      <p class="section-desc">Atendimento rápido para turistas, moradores e alunos interessados em aulas.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <div><strong>WhatsApp</strong><p>(11) 99999-0000</p></div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i>
+          <div><strong>Instagram</strong><p>@wavepoint.surf</p></div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><strong>Localização</strong><p>Av. Beira Mar, 100 - Cidade Litorânea</p></div>
+        </div>
+      </div>
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Santos%20SP%20praia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>WAVEPOINT</h3>
+        <p>Aluguel de itens de praia e aulas de surf com foco em praticidade, lazer e turismo.</p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Menu</strong>
+        <a href="#servicos">Serviços</a>
+        <a href="#equipamentos">Equipamentos</a>
+        <a href="#aulas">Aulas</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div>
+        <strong>Atendimento</strong>
+        <p>WhatsApp: (11) 99999-0000</p>
+        <p>Instagram: @wavepoint.surf</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>@Laura Romano e Leonardo Teixeira</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
