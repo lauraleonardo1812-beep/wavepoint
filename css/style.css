@@ -320,7 +320,7 @@ button {
 .produto-info h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: var(--azul-escuro);
+  color: var(--azul-escuro) !important; 
 }
 
 .card p,
