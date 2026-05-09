@@ -141,7 +141,7 @@ function carregarReservas() {
     return
   }
 
-  lista.innerHTML = reservas.map((reserva) => `
+  lista.innerHTML = reservas.map((reserva, index) => `
     <div class="reserva-item">
       <div>
         <strong>${reserva.servico}</strong>
@@ -153,12 +153,75 @@ function carregarReservas() {
       <button 
         class="btn-outline" 
         style="color: var(--azul-escuro); border-color: #c9dce5;" 
-        onclick="showToast('Reserva em análise pelo atendimento.')"
+        onclick="abrirModalReserva(${index})"
       >
         Ver status
       </button>
     </div>
   `).join("")
+}
+
+function abrirModalReserva(index) {
+  const reservas = JSON.parse(localStorage.getItem("wavepointReservas")) || []
+  const r = reservas[index]
+  if (!r) return
+
+  const obs = r.observacao ? r.observacao : "Nenhuma observação informada."
+
+  const modal = document.createElement("div")
+  modal.className = "modal-overlay"
+  modal.id = "modalReserva"
+  modal.innerHTML = `
+    <div class="modal-box">
+      <button class="modal-close" onclick="fecharModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h2>RESERVA</h2>
+      <div class="modal-servico">${r.servico}</div>
+
+      <div class="modal-info-grid">
+        <div class="modal-info-item">
+          <span>Cliente</span>
+          <strong>${r.nome}</strong>
+        </div>
+        <div class="modal-info-item">
+          <span>WhatsApp</span>
+          <strong>${r.telefone}</strong>
+        </div>
+        <div class="modal-info-item">
+          <span>Data</span>
+          <strong>${formatarData(r.data)}</strong>
+        </div>
+        <div class="modal-info-item">
+          <span>Horário</span>
+          <strong>${r.horario}</strong>
+        </div>
+        <div class="modal-info-item">
+          <span>Entrega</span>
+          <strong>${r.entrega}</strong>
+        </div>
+      </div>
+
+      <div class="modal-obs">
+        <span>Observações</span>
+        <p>${obs}</p>
+      </div>
+
+      <div class="modal-status">Em análise pelo atendimento</div>
+    </div>
+  `
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) fecharModal()
+  })
+
+  document.body.appendChild(modal)
+}
+
+function fecharModal() {
+  const modal = document.getElementById("modalReserva")
+  if (modal) modal.remove()
 }
 
 function formatarData(data) {

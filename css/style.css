@@ -320,7 +320,7 @@ button {
 .produto-info h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: var(--azul-escuro) !important; 
+  color: var(--azul-escuro) !important;
 }
 
 .card p,
@@ -1308,5 +1308,150 @@ button {
 
   .auth-image {
     min-height: 300px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 24, 38, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: subir 0.25s ease both;
+}
+
+.modal-box {
+  background: var(--branco);
+  border-radius: 30px;
+  padding: 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 28px 80px rgba(7, 57, 91, 0.22);
+  border: 1px solid rgba(7, 57, 91, 0.08);
+  position: relative;
+  animation: subir 0.3s ease both;
+}
+
+.modal-box h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: var(--azul-escuro);
+  margin-bottom: 6px;
+}
+
+.modal-box .modal-servico {
+  color: var(--azul);
+  font-weight: 900;
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #eef9ff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  color: var(--azul-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  background: #d5eaf5;
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.modal-info-item {
+  background: #f5fbff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(7, 57, 91, 0.07);
+}
+
+.modal-info-item span {
+  display: block;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.modal-info-item strong {
+  color: var(--azul-escuro);
+  font-size: 15px;
+}
+
+.modal-obs {
+  background: #f5fbff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(7, 57, 91, 0.07);
+  margin-bottom: 22px;
+}
+
+.modal-obs span {
+  display: block;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.modal-obs p {
+  color: var(--texto);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.modal-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 168, 106, 0.1);
+  color: #0aa86a;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.modal-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0aa86a;
+}
+
+@media (max-width: 520px) {
+  .modal-box {
+    padding: 28px 22px;
+  }
+
+  .modal-info-grid {
+    grid-template-columns: 1fr;
   }
 }
