@@ -317,10 +317,11 @@ button {
 }
 
 .card h3,
-.produto-info h3 {
+.produto-info h3,
+#aulas .card h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: var(--azul-escuro) !important;
+  color: #ffffff !important;
 }
 
 .card p,
