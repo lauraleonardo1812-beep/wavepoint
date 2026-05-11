@@ -321,7 +321,14 @@ button {
 #aulas .card h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: #ffffff !important;
+  color: var(--azul-escuro) !important;
+}
+.card h4,
+.produto-info h4,
+#aulas .card h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #fff !important;
 }
 
 .card p,
